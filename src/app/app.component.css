@@ -1,0 +1,31 @@
+.train-coach {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.seat {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.available {
+  background-color: green;
+  color: white;
+}
+
+.unavailable {
+  background-color: red;
+  color: white;
+}
