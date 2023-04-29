@@ -66,7 +66,7 @@ class BookingController extends CI_Controller
         $checkPoint = $checkAlreadyBookedSeats > 0 ? $checkAlreadyBookedSeats + $dataObj['noOfTickets'] : 0;
         /*--------------------------*/
 
-        if ($dataObj['noOfTickets'] <= 7 && $checkPoint < 7) {
+        if ($dataObj['noOfTickets'] <= 7 && $checkPoint <= 7) {
           $result = $this->BObj->saveBookingData($dataObj);
         } else if ($checkPoint) {
           $remaingSeats =  7 - $checkAlreadyBookedSeats;
