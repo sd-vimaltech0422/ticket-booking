@@ -40,9 +40,11 @@ export class AppComponent {
   }
 
   ticketBookingSubmit() {
-    this.tservice.saveBookingStatus(this.ticketJson)
+    this.tservice
+      .saveBookingStatus(this.ticketJson)
       .subscribe(
         (response) => {
+          alert(response.message);
           this.getTicketsAvailableList();
         },
         (errors) => {

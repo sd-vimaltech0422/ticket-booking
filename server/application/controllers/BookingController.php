@@ -68,6 +68,7 @@ class BookingController extends CI_Controller
 
         if ($dataObj['noOfTickets'] <= 7 && $checkPoint <= 7) {
           $result = $this->BObj->saveBookingData($dataObj);
+          echo json_encode($result);
         } else if ($checkPoint) {
           $remaingSeats =  7 - $checkAlreadyBookedSeats;
           $request['message'] = "You have already booked some seats. Now you can only book '$remaingSeats' Seats";
